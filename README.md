@@ -1,7 +1,7 @@
 # CYOA_python
 Grade 11 CS Python Project - Choose Your own Adventure.
 
-Sure, here is a step-by-step procedure to run the app from a user's perspective, including setting up both the backend and frontend.
+Here is a step-by-step procedure to run the app from a user's perspective, including setting up both the backend and frontend.
 
 ### Step-by-Step Procedure
 
