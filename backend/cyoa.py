@@ -288,11 +288,15 @@ class GameML:
             self.outcomes_history.append(1 if outcome == "win" else 0)
 
     def train(self):
-        if len(self.choices_history) > 5:  # Only train if we have enough data
+        logging.debug(f"Choices history: {self.choices_history}")
+        logging.debug(f"Outcomes history: {self.outcomes_history}")
+        if len(self.choices_history) > 5 and len(self.choices_history) == len(self.outcomes_history):  # Only train if we have enough data and lengths match
             X = np.array(self.choices_history)
             y = np.array(self.outcomes_history)
             self.model.fit(X, y)
             self.is_trained = True
+        else:
+            logging.warning("Not enough data to train or inconsistent lengths of choices and outcomes")
 
     def predict_best_choice(self, state):
         if not self.is_trained:
@@ -332,13 +336,13 @@ def make_choice():
     data = request.json
     current_state = data['state']
     choice = data['choice']
-
+    
     logging.debug(f"Current state: {current_state}, Choice: {choice}")
     
     state_data = STORY_DATA[current_state]
     next_state = state_data['choices'][choice]['next']
     next_state_data = STORY_DATA[next_state]
-
+    
     logging.debug(f"Next state: {next_state}")
     
     # Record choice for ML

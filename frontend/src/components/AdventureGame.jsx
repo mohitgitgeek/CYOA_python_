@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import Button from './ui/button';  // Correct import
+import Button from './ui/button';
 import { Alert, AlertDescription } from './ui/alert';
 
 const AdventureGame = () => {
@@ -110,7 +110,7 @@ const AdventureGame = () => {
         </CardContent>
       </Card>
       {showHistory && (
-        <div className="mt-4">
+        <div className="history">
           <h2>Game History</h2>
           <ul>
             {gameHistory.map((entry, index) => (
