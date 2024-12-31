@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  
+  .card-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .card-content {
+    font-size: 1.2em;
+  }
+  
+  .alert {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .alert-destructive {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .alert-description {
+    font-size: 1.2em;
+  }
